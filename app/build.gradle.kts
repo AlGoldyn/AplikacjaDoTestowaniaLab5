@@ -1,3 +1,4 @@
+
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
@@ -63,4 +64,6 @@ dependencies {
     implementation("androidx.room:room-ktx:2.6.1")
 
     implementation("androidx.navigation:navigation-compose:2.7.7")
+    // debugImplementation because LeakCanary should only run in debug builds.
+    debugImplementation("com.squareup.leakcanary:leakcanary-android:2.14")
 }
